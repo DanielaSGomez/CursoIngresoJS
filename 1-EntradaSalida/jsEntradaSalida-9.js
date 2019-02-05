@@ -7,7 +7,7 @@ function mostrarAumento()
 
 	var sueldoIngresado;
 	var porcentaje;
-	var calculo;
+	
 
 	sueldoIngresado = sueldo.value;
 	sueldoIngresado = parseInt(sueldoIngresado);
