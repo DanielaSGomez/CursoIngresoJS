@@ -19,12 +19,13 @@ function Sumar ()
 
 	resultado = item1+item2+item3;
 
-alert(resultado);
+	alert(resultado);
 
 
 
 
 }
+
 function Promedio () 
 {
 	var item1;
@@ -51,7 +52,8 @@ function PrecioFinal ()
 	var item1;
 	var item2;
 	var item3;
-	
+	var sumando;
+	var iva21;
 	var resultado;
 
 	item1 = precioUno.value;
@@ -61,7 +63,9 @@ function PrecioFinal ()
 	item3 = precioTres.value;
 	item3 = parseInt(item3);
 
-	resultado= 
+	sumando = item1+item2+item3;
+	iva21 = (sumando*21)/100;
+    resultado= sumando+iva21;
 
-
+	alert(resultado);
 }
