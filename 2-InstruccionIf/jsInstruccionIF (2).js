@@ -1,9 +1,10 @@
 function mostrar()
 {
 //tomo la edad  
-var edad = edad.value
+var edadIngresada;
+edadIngresada = edad.value;
 
-if (edad>=18) {
+if (edadIngresada>=18) {
 	alert("Usted es mayor");
 }
 
