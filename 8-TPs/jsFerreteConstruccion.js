@@ -21,7 +21,7 @@ function Rectangulo ()
 
 	totalAlambre = perimetro1*3;
 
-	alert(totalAlambre);	
+	alert("Se necesitan " + totalAlambre + " metros de alambre.");	
 
 
 }
@@ -50,7 +50,29 @@ function Circulo ()
 function Materiales () 
 {
 	
+	var bolsaCemento;
+	var bolsaCal;
+	var largoIngresado;
+	var anchoIngresado;
 
+	var calculoAreaRectangulo;
+	var calculoMaterialCemento;
+	var calculoMaterialCal;
+
+	bolsaCemento = 2;
+	bolsaCal = 3;
+
+	largoIngresado = Largo.value;
+	largoIngresado = parseInt(largoIngresado);
+	anchoIngresado = Ancho.value;
+	anchoIngresado = parseInt(anchoIngresado);
+
+	calculoAreaRectangulo = (largoIngresado*anchoIngresado)/2;
+
+	calculoMaterialCemento = calculoAreaRectangulo*bolsaCemento;
+	calculoMaterialCal = calculoAreaRectangulo*bolsaCal;
+
+	alert("Se necesitan " + calculoMaterialCemento + " bolsas de cemento y " + calculoMaterialCal + " bolsas de cal.")
 	
 
 	
