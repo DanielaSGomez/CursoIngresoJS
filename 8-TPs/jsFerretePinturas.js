@@ -13,7 +13,7 @@ function FahrenheitCentigrados ()
 	temperaturaIngresada = parseInt(temperaturaIngresada);
 	temperaturaCalculoCelsius = (temperaturaIngresada-32)*5/9;
 
-	alert("La temperatura convertida a Celsius es "+ temperaturaCalculoCelsius);
+	alert(temperaturaIngresada + " grados Fahrenheit son "+ temperaturaCalculoCelsius+ " grados Celsius.");
 
 
 }
@@ -34,7 +34,7 @@ function CentigradosFahrenheit ()
 
 	temperaturaCalculoFarenheit = (temperaturaIngresada*1.8)+32;
 
-	alert("La temperatura convertida a Farenheit es " + temperaturaCalculoFarenheit);
+	alert(temperaturaIngresada + " grados Celsius son " + temperaturaCalculoFarenheit + " grados Fahrenheit.");
 	
 
 }
