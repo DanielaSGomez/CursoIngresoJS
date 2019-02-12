@@ -9,7 +9,7 @@ estadoIngresado = estadoCivil.value;
 
 
 
-if(edadIngresada>=18&&estadoIngresado == "Soltero") {
+if(edadIngresada>="18"&&estadoIngresado == "Soltero") {
 	alert("Es soltero y no es menor");
 }
 	
