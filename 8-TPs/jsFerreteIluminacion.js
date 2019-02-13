@@ -20,6 +20,9 @@ function CalcularPrecio ()
  	var precioSinDescuento;
  	precioSinDescuento = numeroLamparitasCompradas*precioUnaLamparita;
 
+ 	var recargo;
+ 	recargo = (precioDescuento*10)/100;
+
 
  	if (numeroLamparitasCompradas>=6) {
  		precioDescuento.value = precioSinDescuento-((precioSinDescuento*50)/100);
@@ -37,10 +40,12 @@ function CalcularPrecio ()
  		precioDescuento.value = precioSinDescuento-((precioSinDescuento*10)/100);
  	} else if (numeroLamparitasCompradas==3&&(Marca.value!="FelipeLamparas"&&Marca.value!="ArgentinaLuz")) {
  		precioDescuento.value = precioSinDescuento-((precioSinDescuento*5)/100);
- 	} else if (numeroLamparitasCompradas<3) {
+ 	} else if (precioDescuento.value>120) {
+ 		precioDescuento.value = precioDescuento+recargo;
+ 		alert("Usted pago " + recargo + " de IIBB.");
+ 	} else {
  		precioDescuento.value = precioSinDescuento;
- 	} else if (precioDescuento>=120) {
- 		
+
  	}
 
 
