@@ -10,5 +10,43 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+ 	var precioUnaLamparita;
+ 	precioUnaLamparita = 35;
+
+ 	var numeroLamparitasCompradas;
+ 	numeroLamparitasCompradas = Cantidad.value;
+ 	numeroLamparitasCompradas = parseInt(numeroLamparitasCompradas);
  	
+ 	var precioSinDescuento;
+ 	precioSinDescuento = numeroLamparitasCompradas*precioUnaLamparita;
+
+
+ 	if (numeroLamparitasCompradas>=6) {
+ 		precioDescuento.value = precioSinDescuento-((precioSinDescuento*50)/100);
+ 	} else if(numeroLamparitasCompradas==5&&Marca.value=="ArgentinaLuz") {
+ 		precioDescuento.value = precioSinDescuento-((precioSinDescuento*40)/100);
+ 	} else if (numeroLamparitasCompradas==5&&Marca.value!="ArgentinaLuz") {
+ 		precioDescuento.value = precioSinDescuento-((precioSinDescuento*30)/100);
+ 	} else if (numeroLamparitasCompradas==4&&(Marca.value=="ArgentinaLuz"||Marca.value=="FelipeLamparas")) {
+ 		precioDescuento.value = precioSinDescuento-((precioSinDescuento*25)/100);
+ 	} else if (numeroLamparitasCompradas==4&&(Marca.value!="ArgentinaLuz"||Marca.value!="FelipeLamparas")) {
+ 		precioDescuento.value = precioSinDescuento-((precioSinDescuento*20)/100);
+ 	} else if (numeroLamparitasCompradas==3&&Marca.value=="ArgentinaLuz") {
+ 		precioDescuento.value = precioSinDescuento-((precioSinDescuento*15)/100);
+ 	} else if (numeroLamparitasCompradas==3&&Marca.value=="FelipeLamparas") {
+ 		precioDescuento.value = precioSinDescuento-((precioSinDescuento*10)/100);
+ 	} else if (numeroLamparitasCompradas==3&&(Marca.value!="FelipeLamparas"&&Marca.value!="ArgentinaLuz")) {
+ 		precioDescuento.value = precioSinDescuento-((precioSinDescuento*5)/100);
+ 	} else if (numeroLamparitasCompradas<3) {
+ 		precioDescuento.value = precioSinDescuento;
+ 	} else if (precioDescuento>=120) {
+ 		
+ 	}
+
+
+
+
+
+
+
 }
