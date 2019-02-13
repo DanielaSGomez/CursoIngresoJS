@@ -55,8 +55,30 @@ function CalcularPrecio ()
  	lamparitas=parseInt(lamparitas);
  	precioSinDescuento=precioUnitario*lamparitas;
 
- 	
 
+ 	if (lamparitas>=6) {
+ 		
+ 		precioDescuento.value=precioSinDescuento-((precioSinDescuento*50)/100);
+
+ 	}else{
+ 		if (lamparitas=5) {
+ 			if (Marca.value=="ArgentinaLuz") {
+ 				precioDescuento.value=precioSinDescuento-((precioSinDescuento*40)/100);
+ 			}else{
+ 				precioDescuento.value=precioSinDescuento-((precioSinDescuento*30)/100);
+ 			}
+ 		}
+ 	}else{
+ 		if (lamparitas=4) {
+ 			if (Marca.value=="ArgentinaLuz"||Marca.value=="FelipeLamparas") {
+ 				precioDescuento.value=precioSinDescuento-((precioSinDescuento*25)/100);
+ 			}else{
+ 				precioDescuento.value=precioSinDescuento-((precioSinDescuento*20)/100);
+ 			}
+ 		}
+ 	}else{
+ 		if () {}
+ 	}
 
 
 
