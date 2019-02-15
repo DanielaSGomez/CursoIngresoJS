@@ -47,9 +47,11 @@ function CalcularPrecio ()
 
 
  	var lamparitas;
- 	var precioUnitario=35;
  	var precioSinDescuento;
  	var precioFinal;
+ 	var precioRecargo;
+	var precioUnitario=35;
+ 
 
  	lamparitas=Cantidad.value;
  	lamparitas=parseInt(lamparitas);
@@ -57,33 +59,68 @@ function CalcularPrecio ()
 
 
  	if (lamparitas>=6) {
- 		
- 		precioDescuento.value=precioSinDescuento-((precioSinDescuento*50)/100);
+ 				precioFinal=precioSinDescuento-((precioSinDescuento*50)/100);
+ 				precioDescuento.value= precioFinal;
+	
+	}else if (lamparitas==5) {
 
- 	}else{
- 		if (lamparitas=5) {
- 			if (Marca.value=="ArgentinaLuz") {
- 				precioDescuento.value=precioSinDescuento-((precioSinDescuento*40)/100);
- 			}else{
- 				precioDescuento.value=precioSinDescuento-((precioSinDescuento*30)/100);
- 			}
- 		}
- 	}else{
- 		if (lamparitas=4) {
- 			if (Marca.value=="ArgentinaLuz"||Marca.value=="FelipeLamparas") {
- 				precioDescuento.value=precioSinDescuento-((precioSinDescuento*25)/100);
- 			}else{
- 				precioDescuento.value=precioSinDescuento-((precioSinDescuento*20)/100);
- 			}
- 		}
- 	}else{
- 		if () {}
- 	}
+			if (Marca.value=="ArgentinaLuz") {
+			
+				precioFinal=precioSinDescuento-((precioSinDescuento*40)/100);
+				precioDescuento.value=precioFinal;
+			
+			}else{
+			
+				precioFinal=precioSinDescuento-((precioSinDescuento*30)/100);
+				precioDescuento.value=precioFinal;
+			}
+	
+	}else if (lamparitas==4) {
+
+			if (Marca.value=="ArgentinaLuz"||Marca.value=="FelipeLamparas") {
+				precioFinal=precioSinDescuento-((precioSinDescuento*25)/100);
+				precioDescuento.value=precioFinal;
+
+			}else{
+
+				precioFinal=precioSinDescuento-((precioSinDescuento*20)/100);
+				precioDescuento.value=precioFinal;
+			}
+	
+	}else if (lamparitas==3) {
+
+			if (Marca.value=="ArgentinaLuz") {
+				
+				precioFinal=precioSinDescuento-((precioSinDescuento*15)/100);
+				precioDescuento.value=precioFinal;
+			
+			}else if (Marca.value=="FelipeLamparas") {
+				
+				precioFinal=precioSinDescuento-((precioSinDescuento*10)/100);
+				precioDescuento.value=precioFinal;
+			}else{
+				
+				precioFinal=precioSinDescuento-((precioSinDescuento*5)/100);
+				precioDescuento.value=precioFinal;
+			}
+
+	}else{
+		
+		precioFinal=precioSinDescuento;
+		precioDescuento.value=precioFinal;
+	
+	}
 
 
+	
 
+	if (precioFinal>=120) {
+			
 
+		precioRecargo=(precioFinal*10)/100;
+		alert("IIBB Usted pago: $ "+precioRecargo);
 
-
+	}
 
 }
+
