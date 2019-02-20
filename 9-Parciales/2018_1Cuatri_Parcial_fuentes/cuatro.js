@@ -8,6 +8,7 @@ function mostrar()
 	var descuentoAdicional;
 	var recargoConTarjeta;
 	var metodoDePago;
+	var mensaje;
 
 	numeroProductos = prompt("Ingrese la cantidad de productos que desea comprar");
 	numeroProductos = parseInt(numeroProductos);
@@ -22,20 +23,20 @@ function mostrar()
 	recargoConTarjeta = precioNoFinal+((precioNoFinal*10)/100);
 
 	if (numeroProductos>2&&metodoDePago==1) {
-		alert("El precio final con descuento es $"+descuentoAplicadoDeDos);
+		mensaje="El precio final con descuento es $"+descuentoAplicadoDeDos;
 	} else if( precioNoFinal>2000&&metodoDePago==1){
-		alert("El precio final con descuento adicional es $"+descuentoAdicional);
+		mensaje="El precio final con descuento adicional es $"+descuentoAdicional;
 	} else if (metodoDePago==2) {
-		alert("El precio final con recargo por pago con tarjeta es $"+ recargoConTarjeta);
+		mensaje="El precio final con recargo por pago con tarjeta es $"+ recargoConTarjeta;
 	}else{
-		alert("El precio final es $"+ precioNoFinal);
+		mensaje="El precio final es $"+ precioNoFinal;
 	}
 //fijarse de no hacer tantas cuentas innecesarias
 //mostrar solo lo que hay que mostrar
 
 
 
-
+alert(mensaje);
 
 
 }
