@@ -17,17 +17,21 @@ function mostrar()
 			mensaje="Acá hace más calor";
 			break;
 
-		case
+		case "marte":
+		case "júpiter":
+		case "saturno":
+		case "urano":
+		case "neptuno":
+		case "plutón":
+			mensaje="Acá hace más frio";
+			break;
 
-
-
-
-
-
+		default:
+			mensaje="No es un planeta válido.";
 
 
 	}
 
-
+alert(mensaje);
 
 }
