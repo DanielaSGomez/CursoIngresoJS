@@ -3,6 +3,8 @@ function mostrar()
 
 	var contador=0;
 	// declarar variables
+	var numeroIngresado;
+	
 	
 	var respuesta='si';
 
