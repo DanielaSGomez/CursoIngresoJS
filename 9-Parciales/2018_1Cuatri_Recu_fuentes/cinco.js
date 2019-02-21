@@ -3,8 +3,6 @@ function mostrar()
 	var tipoDePago;
 	var descuento;
 	var tipoDePaquete;
-	
-	var descuentoPorPaquete;
 	var precioHabitacion;
 	var precioFinal;
 
@@ -16,7 +14,43 @@ function mostrar()
 	
 
 	switch(tipoDePago)
+	{
+		case "visa":
+		case "mercadopago":
+			descuento=10;
+			break;
+		case "paypal":
+			switch(tipoDePaquete)
+			{
+				case "todoincluido":
+					descuento=25;
+					break;
+				default:
+					descuento=15;
+					break;
+			}
+			break;
+		case "efectivo":
+			switch(tipoDePaquete)
+			{
+				case "todoincluido":
+					descuento=35;
+					break;
+				case "soloDesayunos":
+					descuento=30;
+					break;
+				default:
+					descuento=20;
+					break;
+			}	
+			break;
+		default:
+			descuento=5;
+	}
 	
+
+	precioFinal=precioHabitacion*descuento/100;
+	precioFinal=precioHabitacion-descuento;
 
 //usar solo switch sin if
 //todos los case
@@ -25,7 +59,7 @@ function mostrar()
 
 
 
-	alert(precioFinal);
+	alert("El precio final de la habitacion es "+precioFinal);
 
 
 }
