@@ -41,6 +41,7 @@ function verificar()
 		mensaje="Te falta";
 	}
 	
+	console.log(numeroSecreto);
 switch(contadorIntentos)
 {
 	case "1":

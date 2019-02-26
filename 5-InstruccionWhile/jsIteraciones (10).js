@@ -1,7 +1,7 @@
 function mostrar()
 {
 
-	var contador=0;
+	
 	//declarar contadores y variables 
 	var numeroIngresado;
 	var contadorPositivo = 0;

@@ -33,23 +33,19 @@ switch(horaIngresada)
 	case 3:
 	case 4:
 	case 5:
-
-		mensaje="Es de noche";
-		break;
-		
-
 	case 20:
 	case 21:
 	case 22:
 	case 23:
 	case 24:
-		
-		if (laHora.value==20||laHora.value==21||laHora.value==22||laHora.value==23||laHora.value==24)
-		{
-			mensaje="A dormir";
+	
+		mensaje="Es de noche.";
+		if (laHora.value>=20&&laHora.value<=24) {
+			mensaje = mensaje + " A dormir";
 		}
+		
 		break;
-
+		
 	default:
 		mensaje="No es una hora valida";
 

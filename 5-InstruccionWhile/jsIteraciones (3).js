@@ -13,7 +13,7 @@ while(clave!="utn750")
 }
 
 
-
+//para validar tengo que fijarme que este mal validado
 
 }//FIN DE LA FUNCIÓN
 //validacion de datos

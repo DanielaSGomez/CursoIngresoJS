@@ -12,16 +12,16 @@ function mostrar()
 
 	while(respuesta!="no")
 	{
-		contador++;
+		contador++;//en vez de usar contador puedo usar bandera=true
 		numeroIngresado = prompt("Ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
 	
 
-		if (contador==1) //si el contador vale 1,los maximos y minimos van a valer el num ingresado xq no hay mas, a partir de aca se van a tomar como referencia este if para determinar los otros maximos y minimos
+		if (contador==1) //aca uso bandera=truesi el contador vale 1,los maximos y minimos van a valer el num ingresado xq no hay mas, a partir de aca se van a tomar como referencia este if para determinar los otros maximos y minimos
 		{
 			max = numeroIngresado;
 			min = numeroIngresado;
-			contador++;
+			contador++;//y aca uso bandera=false para determinar que es la priemra vez que ocurre 
 
 		}
 		else
