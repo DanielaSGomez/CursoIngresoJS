@@ -7,7 +7,7 @@ function mostrar()
 	var numeroIngresado;
 
 
-	while(respuesta=="si")
+	while(respuesta!="no")
 	{
 
 		contador++;
@@ -20,7 +20,16 @@ function mostrar()
 
 	}
 
+/*
+el while tiene tres partes
+inicializacion: var contador = 0;
+condicion: while(condicion: contador<10/continuar!="si")
+iteracion: contador +1; contador++; contador +=1;prompt("seguir?");
 
+
+
+
+*/
 
 
 

@@ -1,5 +1,5 @@
 function mostrar()
-{
+{//isNan(nota)==true||nota<0||nota>10) para que muestre el error
 
 	var contador=0;
 	// declarar variables

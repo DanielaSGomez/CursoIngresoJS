@@ -18,8 +18,7 @@ function mostrar()
 		
 
 
-
-		if (notaIngresada>=0&&notaIngresada<=10) 
+	if (notaIngresada>=0&&notaIngresada<=10) 
 		{
 			cantidadNotas++;
 			sumaNotas=sumaNotas+notaIngresada;
@@ -30,33 +29,34 @@ function mostrar()
 				sexoIngresado=prompt("No es valido. Ingrese f o m");
 			}
 			
-		}
-		else
-		{
-			notaIngresada=prompt("La nota ingresada es invalida. Ingrese un numero entre 0 y 10");
-		}
+			}
+			else
+			{
+				notaIngresada=prompt("La nota ingresada es invalida. Ingrese un numero entre 0 y 10");
+			}
 
-		if (sexoIngresado=="m"&&notaIngresada>=6) {
+			if (sexoIngresado=="m"&&notaIngresada>=6) {
 			cantidadVarones++;
+		
+			if (contador==1) 
+				{
+					notaBaja=notaIngresada;
+				
+				}
 
-		}
+			else
+			{
+				if (notaIngresada<notaBaja) 
+				{
+					notaBaja=notaIngresada + " y el sexo es: "+sexoIngresado;
+
+				}
+			}
 
 		
 	//console.log(contador);
 
-		if (contador==1) 
-		{
-			notaBaja=notaIngresada;
-	
-		}
-
-		else
-		{
-			if (notaIngresada<notaBaja) 
-			{
-				notaBaja=notaIngresada + " y el sexo es: "+sexoIngresado;
-
-			}
+		
 		}
 
 
