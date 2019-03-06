@@ -3,7 +3,7 @@
 function mostrar()
 {
 
-	var primerNumero;
+	/*var primerNumero;
 	var segundoNumero;
 	var tercerNumero;
 	var cuartoNumero;
@@ -69,7 +69,46 @@ alert("El numero mayor es "+numeroMayor);
 
 
 
-alert("El precio final es "+descuento);
+alert("El precio final es "+descuento);*/
+
+	var primerNumero;
+	var segundoNumero;
+	var operacion;
+	var mensaje;
+
+	primerNumero = prompt("Ingrese un numero");
+	primerNumero = parseInt(primerNumero);
+	segundoNumero = prompt("Ingrese otro numero");
+	segundoNumero = parseInt(segundoNumero);
+
+	if (primerNumero>segundoNumero) 
+	{
+		operacion = primerNumero/segundoNumero;
+		mensaje = "El resultado es " + operacion;
+	}
+	else
+	{
+		if (primerNumero<segundoNumero) 
+		{
+			operacion = primerNumero + segundoNumero;
+			mensaje = "El resultado es " + operacion;
+			if (operacion<50) 
+			{
+				mensaje = "La suma es " + operacion + " y es menor a 50.";
+			}
+		}
+		else
+		{
+			mensaje = "El primer numero es " + primerNumero + " y el segundo es " + segundoNumero; 
+		}
+	}
+
+
+	alert(mensaje);
+
+
+
+
 
 
 

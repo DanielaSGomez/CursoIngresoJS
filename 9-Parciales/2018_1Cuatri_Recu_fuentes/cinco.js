@@ -1,6 +1,6 @@
 function mostrar()
 {
-	var tipoDePago;
+	/*var tipoDePago;
 	var descuento;
 	var tipoDePaquete;
 	var precioHabitacion;
@@ -59,7 +59,66 @@ function mostrar()
 
 
 
-	alert("El precio final de la habitacion es "+precioFinal);
+	alert("El precio final de la habitacion es "+precioFinal);*/
+
+
+
+	var diaDeLaSemana;
+	var mensaje;
+
+	diaDeLaSemana = prompt("Ingrese un dia de la semana(usar minusculas).");
+
+	switch(diaDeLaSemana)
+	{
+		case "lunes":
+		case "martes":
+		case "miercoles":
+		case "jueves":
+		case "viernes":
+					mensaje = "A trabajar";
+					break;
+		case "sabado":
+		case "domingo":
+					mensaje ="Buen finde";
+					break;
+		default:
+					mensaje = "No es un dia válido";
+					break;
+	}
+
+	alert(mensaje);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
