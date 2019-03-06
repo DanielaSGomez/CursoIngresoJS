@@ -1,7 +1,7 @@
 function mostrar()
 {
 
-	var numeroProductos;
+	/*var numeroProductos;
 	var precioProducto;
 	var precioNoFinal;
 	var descuentoAplicadoDeDos;
@@ -36,7 +36,44 @@ function mostrar()
 
 
 
-alert(mensaje);
+alert(mensaje);*/
+
+
+	var primerNumero;
+	var segundoNumero;
+	var resultado;
+	var mensaje;
+
+	primerNumero = prompt("Ingrese un número");
+	primerNumero = parseInt(primerNumero);
+	segundoNumero = prompt("Ingrese un segundo número");
+	segundoNumero = parseInt(segundoNumero);
+
+	if (primerNumero>segundoNumero) 
+	{
+		resultado = primerNumero - segundoNumero;
+		mensaje = "La resta es " + resultado;
+	}
+
+	else
+	{
+		if (primerNumero<segundoNumero) 
+		{
+			resultado = primerNumero + segundoNumero;
+			mensaje = "La suma es " + resultado;
+			if (resultado > 10) 
+			{
+				
+				mensaje ="La suma es " + resultado + " y superó el 10.";
+			}
+		}
+		else
+		{
+			mensaje = "El primer número es " + primerNumero + " y el segundo es " + segundoNumero;
+		}
+	}
+
+	alert(mensaje);
 
 
 }
